@@ -1,0 +1,7 @@
+node_modules
+
+uploads/*.png
+uploads/*.gif
+!uploads/.gitkeep
+
+*.sqlite
