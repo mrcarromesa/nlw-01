@@ -53,7 +53,9 @@ const Detail: React.FC = () => {
   useEffect(() => {
     async function getPoint() {
       const { data } = await api.get(`points/${pointParams.point_id}`);
-      setPoint(data);
+      const newPoint = data;
+      newPoint.point = data.serializedPoint;
+      setPoint(newPoint);
     }
     getPoint();
   }, [pointParams]);
